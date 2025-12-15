@@ -10,7 +10,7 @@
     <!-- Top Nav Dock -->
     <nav>
       <a href="#intro">Home</a>
-      <a href="...">Projects</a>
+      <a href="#projects">Projects</a>
       <a href="...">Skills</a>
       <a href="...">Contact</a>
     </nav>
@@ -37,12 +37,43 @@
           <img style="height:100%;aspect-ratio:1/1"></img>
         </div>
       </div>
-      <article>
+      <article style="margin-bottom: 50px;">
         I'm Gryffin, a Computer Science student who's passionate about algorithms, machine learning, web development, 
         fintech, and software development. Always experimenting and excited to learn new languages and best practices.
       </article>
-      <button class="glow_button">See My Projects</button>
-      <button class="glass_button">Read My Blog</button>
+
+      <!-- Functions to scroll for buttons -->
+
+      <script>
+        const projects = document.getElementById("projects");
+        const blog = document.getElementById("blog")
+
+        function seeProjects() {
+          projects.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function seeBlog() {
+          blog.scrollIntoView({ behavior: "smooth"});
+        }
+      </script>
+
+      <button onclick="seeProjects" class="glow_button">See My Projects</button>
+      <button onclick="seeBlog" class="glass_button">Read My Blog</button>
     </header>
+    <section class="projects_section" id="projects">
+      <h2>My Projects</h2>
+      <p style="color:gray; width:50%; margin-left:25%; margin-right:25%;">From coursework to competitions, here are a few of my projects I've built while learning and exploring CS.</p>
+      <div class="proj_masonry">
+        <div class="projectOne">
+          <div>
+          </div>
+          <h3 style="height:0px;align-self:flex-end; font-size:clamp(1rem, 2vw, 2rem)">Edgewood Robotics Page</h3>
+          <p style="color:gray; font-size:clamp(.5rem, 1.5vw, 1rem);">Edgewood Highschool's FIRST Robotics club's official site. Created to act as a nexus for sponsors, and member information. Built with HTML, Vercel, CSS, and JS.</p>
+        </div>
+        <div class="projectOne" style="align-self:flex-start;">
+          Hello
+        </div>
+      </div>
+    </section>
   </body>
 </html>
